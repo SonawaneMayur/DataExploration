@@ -11,7 +11,7 @@ setuptools.setup(
     description="analyse the parquet file and generate the descriptive stats, character encoding, regression analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/",
+    url="https://github.com/SonawaneMayur/Exploratory_Data_Analysis.git",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
