@@ -7,7 +7,7 @@ setuptools.setup(
     name="Exploratory_Data_Analysis",
     version="0.0.1",
     author="Mayur Sonawane",
-    author_email="mayurs1690@gmail.com",
+    author_email="sonawane.m@husky.neu.edu",
     description="analyse the parquet file and generate the descriptive stats, character encoding, regression analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
