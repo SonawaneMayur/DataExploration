@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="data-analysis",
+    name="Exploratory_Data-Analysis",
     version="0.0.1",
     author="Mayur Sonawane",
     author_email="mayurs1690@gmail.com",
