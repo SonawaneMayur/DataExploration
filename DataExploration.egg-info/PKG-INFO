@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: DataExploration
+Version: 0.0.1
+Summary: analyse the parquet file and generate the descriptive stats, character encoding, regression analysis
+Home-page: https://github.com/SonawaneMayur/
+Author: Mayur Sonawane
+Author-email: sonawane.m@husky.neu.edu
+License: UNKNOWN
+Description: Analysis of all Big Data files like parquet file and
+        generate the descriptive stats, character encoding,
+        regression analysis for each column exist in the file
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.4
+Description-Content-Type: text/markdown
