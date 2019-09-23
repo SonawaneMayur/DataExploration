@@ -9,6 +9,9 @@ import pandas as pd
 import pyarrow.parquet as pq
 import json
 
+from .utils import get_logger
+
+logger = get_logger(__name__)
 
 def describe_df(df, op_describe_file, include=None):
     """
@@ -31,7 +34,7 @@ def describe_df(df, op_describe_file, include=None):
         with open(op_describe_file, 'w') as fp:
             json.dump(desc_json, fp)
     except IOError as e:
-        print("Error: while exporting descriptive_stats JSON", e)
+        logger.error("Error while exporting descriptive_stats JSON", e)
         raise
 
 
@@ -70,7 +73,7 @@ def encode_df(df, op_encode_file):
     try:
         encode_dataframe(df).to_parquet(op_encode_file)
     except IOError as e:
-        print("Error: while exporting encoded parquet file ", e)
+        logger.error("Error: while exporting encoded parquet file ", e)
         raise
 
 
@@ -102,20 +105,3 @@ def read_file(file_path):
     df: Pandas Dataframe
     """
     return pq.read_table(file_path).to_pandas()
-
-#
-# def main():
-#     print(len(sys.argv))
-#     if len(sys.argv) != 3:
-#         print("Usage: Encode Parquet file stats {}".format(sys.stderr))
-#         exit(-1)
-#
-#     df = read_file(sys.argv[1])
-#     input_file_name = os.path.splitext(os.path.basename(sys.argv[1]))[0]
-#     output_describe_json = "{}/{}_description.json".format(sys.argv[2],input_file_name)
-#     output_encode_parqute = "{}/{}_encoded.parquet".format(sys.argv[2], input_file_name)
-#     describe_df(df, output_describe_json)
-#     encode_df(df, output_encode_parqute)
-#
-# if __name__ == '__main__':
-#     main()
